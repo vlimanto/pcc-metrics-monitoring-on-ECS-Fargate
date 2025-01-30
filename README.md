@@ -1,7 +1,7 @@
 
-# Welcome to your CDK Python project!
+# Introduction
 
-This is a blank project for CDK development with Python.
+This setups Prometheus and Grafana on AWS ECS Fargate for monitoring Prisma Cloud Compute module.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
