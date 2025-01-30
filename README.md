@@ -3,6 +3,8 @@
 
 This setups Prometheus and Grafana on AWS ECS Fargate for monitoring Prisma Cloud Compute module.
 
+Need to replace <REPLACEME> with proper values.
+
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 This project is set up like a standard Python project.  The initialization

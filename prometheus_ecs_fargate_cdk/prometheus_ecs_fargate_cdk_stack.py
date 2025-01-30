@@ -145,7 +145,7 @@ class PrometheusEcsFargateCdkStack(Stack):
             host=None,
         )
 
-        secret = sm.Secret.from_secret_complete_arn(self,id='App4PCC',secret_complete_arn='arn:aws:secretsmanager:ap-southeast-2:010438472260:secret:App4PCC-xOLOCY')
+        secret = sm.Secret.from_secret_complete_arn(self,id='myAccessKey',secret_complete_arn='arn:aws:secretsmanager:ap-southeast-2:<REPLACEME>:secret:<REPLACEME>')
         
         # Add Init Container
         initContainer = task_definition.add_container(
@@ -168,7 +168,7 @@ class PrometheusEcsFargateCdkStack(Stack):
 
         initContainer.add_environment(
             name="PROM_CONFIG",
-            value="Z2xvYmFsOgogIHNjcmFwZV9pbnRlcnZhbDogMTVzCiAgc2NyYXBlX3RpbWVvdXQ6IDEwcwogIGV2YWx1YXRpb25faW50ZXJ2YWw6IDE1cwpzY3JhcGVfY29uZmlnczoKICAjIFByaXNtYSBDbG91ZCBzY3JhcGUgY29uZmlndXJhdGlvbgogIC0gam9iX25hbWU6IHR3aXN0bG9jawogICAgc2NoZW1lOiBodHRwcwogICAgc3RhdGljX2NvbmZpZ3M6CiAgICAgICMgUmVwbGFjZSAidGFyZ2V0IiBhbmQgIm1ldHJpY3NfcGF0aCIgd2l0aCB5b3VyIHBhdGggdG8gQ29uc29sZSByZXNwZWN0aXZlbHkKICAgICAgLSB0YXJnZXRzOiBbInVzLXdlc3QxLmNsb3VkLnR3aXN0bG9jay5jb20iXQogICAgbWV0cmljc19wYXRoOiAvdXMtNC0xNjEwNTUyODMvYXBpL3YxL21ldHJpY3MKICAgICMgQWNjZXNzL3NlY3JldCBBUEkga2V5IHdpdGggQ29tcHV0ZSBBdWRpdG9yIChvciBncmVhdGVyKSBhY2Nlc3MKICAgIGJhc2ljX2F1dGg6CiAgICAgIHVzZXJuYW1lX2ZpbGU6ICIvZXRjL3Byb21ldGhldXMvc2VjcmV0X2lkIgogICAgICBwYXNzd29yZF9maWxlOiAiL2V0Yy9wcm9tZXRoZXVzL3NlY3JldF9rZXkiCgo=="
+            value="<REPLACEME_BASE64>"
         )
 
         initContDep = ecs.ContainerDependency(
